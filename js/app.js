@@ -13,9 +13,9 @@ const app = new Vue( {
             "Suporte 24 horas online",
         ],
         menus: [
-            { link: "#", text: "Serviços", sclass: "smooth-scroll" },
-            { link: "#", text: "API", sclass: "smooth-scroll" },
-            { link: "#", text: "CADASTRE-SE AGORA", sclass: "btn-nav btn-red smooth-scroll" },
+            { link: "./servicos.html", text: "Serviços", sclass: "smooth-scroll" },
+            { link: "./api.html", text: "API", sclass: "smooth-scroll" },
+            { link: "javascript:void( app.methods.my_link() )", text: "CADASTRE-SE AGORA", sclass: "btn-nav btn-red " },
         ],
         beneficio: {
             title: "Benefícios para seu Canal",
@@ -60,19 +60,19 @@ const app = new Vue( {
             sub_title: "Começe hoje mesmo a receber inscritos e visualizações para seu canal!",
             list: [
                 {
-                    ico: "",
+                    ico: "icon-user",
                     delay: "0.2s",
                     title: "Primeiro Passo",
                     content: "Inicialmente, você deve criar um cadastro logo a cima em nossa plataforma, você nao precisa informar nenhuma de suas senhas neste cadastro. Lembrando que este cadastro é para o acompanhamento em tempo real dos seus pedidos."
                 },
                 {
-                    ico: "",
+                    ico: "icon-cart",
                     delay: "0.3s",
                     title: "Segundo Passo",
                     content: "Você deve adicionar seu primeiro saldo, é com ele que você vai conseguir fazer seu primeiro pedido. Lembrando que aceitamos cartão, boleto, e transferencia bancaria (para TED ou DOC, envie o comprovante para o whatsapp para a liberação do saldo)."
                 },
                 {
-                    ico: "",
+                    ico: "icon-coffee",
                     delay: "0.4s",
                     title: "Ultimo Passo",
                     content: `Com seu saldo liberado, você deve fazer seu primeiro pedido, caso opte por inscritos, você deve selecionar o serviço de "Inscritos Brasileiros", colocar o link do seu canal, e a quantidade de inscritos que deseja. Você pode conferir o andamento do seu pedido pelo menu "Histórico".`
@@ -80,5 +80,19 @@ const app = new Vue( {
             ],
         },
         form: 'login',
+        methods: {
+            my_link: () => {
+                let is_home = window.location.href.indexOf('.html') == -1
+                if( is_home ) {
+                   app.form = 'cadastrar' 
+                } else {
+                    window.location.href = `//${window.location.hostname}/#me-cadastrar`
+                }
+            }
+        }
     }
 } )
+
+if( window.location.hash == '#me-cadastrar' ) {
+    app.form = 'cadastrar'
+}
