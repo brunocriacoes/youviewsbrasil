@@ -46,6 +46,10 @@ Hotel Landing page, Software Landing page, Medical Landing page, Hosting Landing
 /* ==========================================================================
    01. GENERAL STYLE
 ========================================================================== */ 
+:root {
+    --tema: #e74c3c;
+}
+
 body {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -4582,3 +4586,29 @@ input.toggle-round-flat:checked + label:after {
     margin-right: 2px;
 }
 
+.inner__chamada {
+    display: block;
+    background-color: var(--tema);
+    padding: 50px 0;
+    color: #FFF;
+}
+.inner_copy {
+    display: block;
+    background-color: var(--tema);
+    line-height: 40px;
+    color: #FFF;
+    text-align: center;
+    font-size: 11px;
+}
+.my-gap {
+    padding: 50px 0;
+    color: #FFF;
+}
+.my-paralax {
+    background-attachment: fixed;
+}
+.my-card {
+    display: block;
+    background-color: rgba( 255, 255, 255, .95);
+    padding: 50px;
+}
