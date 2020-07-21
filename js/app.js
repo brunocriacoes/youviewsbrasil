@@ -13,8 +13,8 @@ const app = new Vue( {
             "Suporte 24 horas online",
         ],
         menus: [
-            { link: "./servicos.html", text: "Serviços", sclass: "smooth-scroll" },
-            { link: "./api.html", text: "API", sclass: "smooth-scroll" },
+            { link: "./services", text: "Serviços", sclass: "smooth-scroll" },
+            { link: "./api", text: "API", sclass: "smooth-scroll" },
             { link: "javascript:void( app.methods.my_link() )", text: "CADASTRE-SE AGORA", sclass: "btn-nav btn-red " },
         ],
         beneficio: {

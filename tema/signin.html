@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row y-middle">
             <div class="col-sm-6">
-                <h2 class="text-white m-b-md" v-for="item in chamada" :key="item">TITLE {{ item }} </h2>
-                <p class="lead text-white m-b-md" v-for="text in itensChamada" :key="text"> RESUMO{{text}} </p>
+                <h2 class="text-white m-b-md" v-for="item in chamada" :key="item"> <span v-html="item"></span> </h2>
+                <p class="lead text-white m-b-md" v-for="text in itensChamada" :key="text"> <span v-html="text"></span> </p>
             </div>
             <div class="col-sm-6">
                 <div class="my-card">
@@ -118,8 +118,8 @@
                     <ul class="features-list features-list-left list-unstyled">
                         <li class="m-b-lg wow zoomIn" v-for="vantagem in beneficio.list_1"
                             :data-wow-delay="vantagem.delay">
-                            <h5>{{ vantagem.title }}</h5>
-                            <p>{{ vantagem.description }}</p>
+                            <h5><span v-html="vantagem.title"></span></h5>
+                            <p><span v-html="vantagem.description"></span></p>
                         </li>
                     </ul>
                 </div>
@@ -127,8 +127,8 @@
                     <ul class="features-list features-list-left list-unstyled">
                         <li class="m-b-lg wow zoomIn" v-for="vantagem in beneficio.list_2"
                             :data-wow-delay="vantagem.delay">
-                            <h5>{{ vantagem.title }}</h5>
-                            <p>{{ vantagem.description }}</p>
+                            <h5><span v-html="vantagem.title"></span></h5>
+                            <p><span v-html="vantagem.description"></span></p>
                         </li>
                     </ul>
                 </div>
@@ -152,14 +152,14 @@
         <div class="container">
             <div class="row y-middle">
                 <div class="col-md-6 col-md-push-6">
-                    <h2 class="m-b-md wow zoomIn">{{ steps.title }}</h2>
-                    <p class="lead m-b-md">{{ steps.sub_title }}</p>
+                    <h2 class="m-b-md wow zoomIn"><span v-html="steps.title"></span></h2>
+                    <p class="lead m-b-md"><span v-html="steps.sub_title"></span></p>
                     <div class="features-block">
                         <div v-for="item in steps.list" class="col-sm-12 icon-left m-b-md clearfix wow slideInUp"
                             :data-wow-delay="item.delay">
                             <i :class="item.ico"></i>
-                            <h5 class="m-t f-w-900">{{ item.title }}</h5>
-                            <p>{{ item.content }}</p>
+                            <h5 class="m-t f-w-900"><span v-html="item.title"></span></h5>
+                            <p><span v-html="item.content"></span></p>
                         </div>
                     </div>
                 </div>
