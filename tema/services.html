@@ -1,0 +1,68 @@
+<section id="hero6" class="hero hero-devices bg-img my-paralax"
+    style="background-image:url('https://brunocriacoes.github.io/youviewsbrasil/images/bg-3-blur.jpg?v=2')">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-sm-6">
+                <h2 class="text-white m-b-md">Serviços</h2>
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="container">
+
+    <div class="margin-50">
+        {% if user['auth'] %}
+        <div>
+            {%else%}
+            <div>
+                {%endif%}
+                <div class="well well-border" style="padding: 0px;">
+                    <table class="table {% if site['rtl'] %} rtl-table {% endif %}" style="font-size: 15px;">
+                        <thead>
+                            <tr>
+                                <th>{{ lang('services.id') }}</th>
+                                <th class="width-service-name">Serviço</th>
+                                <th class="nowrap">Preço a cada 1.000 (R$)</th>
+                                <th class="nowrap">Ordem Mínima</th>
+                                <th class="nowrap">Ordem Máxima</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for category in serviceCategoryList %}
+                            {% if category['name'] %}
+                            <tr>
+                                <td colspan="6" style="background: #054752; color: white">
+                                    <strong>{{ category['name'] }}</strong></td>
+                            </tr>
+                            {% endif %}
+                            {% for service in category['services'] %}
+                            <tr>
+                                <td>{{ service['id'] }}</td>
+                                <td>{{ service['name'] }}</td>
+                                <td>R$ {{ service['rate']|number_format(2, ',', '.') }}</td>
+                                <td>{{ service['min']|number_format(0, '', '.') }}</td>
+                                <td>{{ service['max']|number_format(0, '', '.') }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% endfor%}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        {% if servicesText %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="well {% if site['rtl'] %} rtl-content {% endif %}">
+                        {{ servicesText }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>

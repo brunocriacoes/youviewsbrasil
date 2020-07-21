@@ -22,35 +22,35 @@ const app = new Vue( {
             sub_title: "Conheça Nossos Serviços",
             list_1: [
                 { 
-                    title: "Use para si ou venda os serviços",
-                    description: "Utilize todos os serviços para si próprio ou ainda ganhe dinheiro vendendo os serviços pelo painel de revenda. Atualmente os serviços para redes sociais são uma ótima fonte de renda.",
+                    title: "INSCRITOS 100% REAIS",
+                    description: "Começe hoje mesmo a receber inscritos brasileiros 100% reais e ativos para seu canal.",
                     delay: '0.2s'
                 },
                 { 
-                    title: "Garantias",
-                    description: "Comprar inscritos no YouTube é uma forma 100% legal e está em conformidade com as rigorosas regras e políticas do YouTube, pois tudo que vendemos, são pessoas reais, feitos por pessoas como eu e você.",
+                    title: "VISUALIZAÇÕES 100% REAIS",
+                    description: "Aumente as visualizações dos seus vídeos, cresça seu canal por inteiro, likes e views.",
                     delay: '0.3s'
                 },
                 { 
-                    title: "Suporte",
-                    description: "Suporte 24 horas por dia, todos os dias da semana, incluindo sábados, domingos e feriados.",
+                    title: "LIKES EM SEUS VÍDEOS",
+                    description: "O YouTube nada mais é que uma maquina de algoritmos, e conhecemos muito bem como funciona este sistema, likes são essenciais para o crescimento organico do seu canal.",
                     delay: '0.4s'
                 },
             ],
             list_2: [
                 { 
-                    title: "Inscritos Brasileiros",
-                    description: "Somos a unica plataforma do mercado que possui o serviço de Inscritos Brasileiros 100% reais e ativos, podendo ser enviado até 100.000 por canal! incrivel não?",
+                    title: "SERVIÇOS DE MARKETING EFETIVOS",
+                    description: "Trabalhamos com a criação de identidade visual para seu projeto, iremos te ajudar a tirar os seus sonhos do papel e dar vida a ele.",
                     delay: '0.2s'
                 },
                 { 
-                    title: "Qualidade no Serviço",
-                    description: "Todos os serviços disponíveis na plataforma são providos de usuários reais e perfis ativos na rede social desejada, fornecendo assim, maior segurança e credibilidade para quem for visitar o perfil de sua marca ou seu perfil pessoal.",
+                    title: "PRODUÇÃO E PUBLICAÇÃO",
+                    description: "Aqui criamos as ferramentas e o conteúdo determinados. Depois publicamos, mensuramos e analisamos a resposta do público.",
                     delay: '0.3s'
                 },
                 { 
-                    title: "Como fazemos isso?",
-                    description: "Nós trabalhamos no mercado de Inscritos e Visualizações a mais de 5 anos, criando campanhas com métodos de divulgações proprios para que você receba inscritos e visualizações reais, feitos por pessoas como eu e você!",
+                    title: "RELATÓRIOS",
+                    description: "Categorizamos o público alvo para fazer ainda mais efetiva nossa campanha. Finalimente teremos os relatórios e conclusões de cada campanha.",
                     delay: '0.4s'
                 },
             ],
