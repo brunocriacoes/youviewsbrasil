@@ -1,10 +1,10 @@
 const app = new Vue( {
     el: "#app",
     data: {
-        chamada: [
-            "Bem-Vindo(a)",
-            "Consiga INSCRITOS REAIS, hoje mesmo!",
-        ],
+        chamada: {
+            titulo1: "Bem-Vindo(a)",
+            titulo2: "Consiga INSCRITOS REAIS, hoje mesmo!",
+        },
         itensChamada: [
             "Inscritos Brasileiros 100% reais para seu canal",
             "Visualizações 100% reais para seus vídeos",

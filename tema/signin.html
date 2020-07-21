@@ -1,0 +1,173 @@
+<section id="hero6" class="hero hero-devices bg-img my-paralax"
+    style="background-image:url('https://brunocriacoes.github.io/youviewsbrasil/images/bg-3-blur.jpg?v=2')">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-sm-6">
+                <h2 class="text-white m-b-md" v-for="item in chamada" :key="item">TITLE {{ item }} </h2>
+                <p class="lead text-white m-b-md" v-for="text in itensChamada" :key="text"> RESUMO{{text}} </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="my-card">
+                    <div v-if=" form == 'login' ">
+                        <h2>Entrar</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Usuário</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-5">Entrar</button>
+                        </form>
+                    </div>
+                    <div v-if=" form == 'cadastrar' ">
+                        <h2>Cadastre-se Agora</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Usuário</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">WhatsApp</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Senha</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirmar Senha</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Lembrar-me</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-5">Cadastre-se</button>
+                        </form>
+                    </div>
+                    <div v-if=" form == 'recuperar' ">
+                        <h2>Resetar senha</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <button type="submit" class="btn btn-primary mb-5">Entrar</button>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <div v-if=" form != 'login' ">
+                        <a href="javascript:void(0)" v-on:click="form = 'login'" class="stretched-link">Entrar</a> <br>
+                    </div>
+                    <a href="javascript:void(0)" v-on:click="form = 'recuperar'" class="stretched-link">Esqueceu sua
+                        Senha?</a> <br>
+                    <p> Novo usuário? <a href="javascript:void(0)" v-on:click="form = 'cadastrar'"
+                            class="stretched-link">Cadastre-se</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section light-bg" id="features" style="padding-top:0px;">
+
+    <section id="features8-1" class="p-y-lg content-align-md bg-edit">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="section-header text-center wow fadeIn">
+                        <h2>{{ beneficio.title }}</h2>
+                        <p class="lead">{{ beneficio.sub_title }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row y-middle">
+                <div class="col-md-4 col-sm-6">
+                    <ul class="features-list features-list-left list-unstyled">
+                        <li class="m-b-lg wow zoomIn" v-for="vantagem in beneficio.list_1"
+                            :data-wow-delay="vantagem.delay">
+                            <h5>{{ vantagem.title }}</h5>
+                            <p>{{ vantagem.description }}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-md-push-4 col-sm-6">
+                    <ul class="features-list features-list-left list-unstyled">
+                        <li class="m-b-lg wow zoomIn" v-for="vantagem in beneficio.list_2"
+                            :data-wow-delay="vantagem.delay">
+                            <h5>{{ vantagem.title }}</h5>
+                            <p>{{ vantagem.description }}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-md-pull-4 text-center features-list-img wow slideInUp">
+                    <img src="https://brunocriacoes.github.io/youviewsbrasil/images/app2.png?v=1"
+                        class="img-responsive m-x-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="inner__chamada">
+        <div class="container">
+            <center>
+                <h2>Fornecedor número #1 de Inscritos e Visualizações do Brasil!</h2>
+            </center>
+        </div>
+    </div>
+
+    <section id="features6-1" class="p-y-lg content-block content-align-md">
+        <div class="container">
+            <div class="row y-middle">
+                <div class="col-md-6 col-md-push-6">
+                    <h2 class="m-b-md wow zoomIn">{{ steps.title }}</h2>
+                    <p class="lead m-b-md">{{ steps.sub_title }}</p>
+                    <div class="features-block">
+                        <div v-for="item in steps.list" class="col-sm-12 icon-left m-b-md clearfix wow slideInUp"
+                            :data-wow-delay="item.delay">
+                            <i :class="item.ico"></i>
+                            <h5 class="m-t f-w-900">{{ item.title }}</h5>
+                            <p>{{ item.content }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-pull-6 wow slideInUp">
+                    <img src="https://brunocriacoes.github.io/youviewsbrasil/images/app5.png?v=1"
+                        class="img-responsive m-x-auto" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
